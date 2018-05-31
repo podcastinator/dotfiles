@@ -1,0 +1,100 @@
+
+set nocompatible
+filetype plugin indent on
+syntax on
+
+" use case-smart searching
+set ignorecase 
+set smartcase
+
+" set line numbers
+set number
+
+" cmdline history
+set history=1000
+
+" allow backspace in insert mode
+set backspace=indent,eol,start
+
+" buffers can exist in the background
+set hidden
+
+" set window title
+set title
+
+
+" intelligent indentation
+set autoindent
+set smartindent
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" on pressing tab, insert 4 spaces
+set expandtab
+" Auto indent pasted text
+nnoremap p p=`]<C-o>
+nnoremap P P=`]<C-o>
+
+" plugins start
+call plug#begin('~/.vim/plugged')
+
+" file explorer
+Plug 'scrooloose/nerdtree'
+" colorscheme
+Plug 'altercation/vim-colors-solarized'
+
+" plugins end
+call plug#end()
+
+" enable syntax highlighting
+if !exists("g:syntax_on")
+    syntax enable
+endif
+
+
+" solarized theme
+let g:solarized_termtrans = 1
+set background=dark
+colorscheme solarized
+
+if has("gui_running")
+    "tell the term has 256 colors
+    set t_Co=256
+end
+
+" use System Clipboard:
+set clipboard=unnamedplus
+
+" map Leader to space
+let mapleader = "\<Space>"
+
+" enable mouse support
+set mouse=a
+
+" f to toggle tree view
+nnoremap <Leader>f :NERDTreeToggle<Enter>
+
+" Quick jumping between splits
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
+
+" Open new splits easily
+map vv <C-W>v
+map ss <C-W>s
+map Q  <C-W>q
+
+" Open splits on the right and below
+set splitbelow
+set splitright
+
+" Automatically resize splits when resizing window
+autocmd VimResized * wincmd = 
+
+" Keep 5 lines below and above the cursor
+set scrolloff=5 
+
+
+
