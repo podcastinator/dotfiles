@@ -43,6 +43,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 " colorscheme
 Plug 'altercation/vim-colors-solarized'
+" commenting
+Plug 'scrooloose/nerdcommenter'
+" tmux integration
+Plug 'christoomey/vim-tmux-navigator'
+
 
 " plugins end
 call plug#end()
@@ -68,7 +73,7 @@ end
 set clipboard=unnamedplus
 
 " map Leader to space
-let mapleader = "\<Space>"
+let mapleader = ","
 
 " enable mouse support
 set mouse=a
@@ -98,4 +103,29 @@ autocmd VimResized * wincmd =
 set scrolloff=5 
 
 
+" Navigate in insert mode to start/end of line
+inoremap <C-a> <C-o>0
+inoremap <C-e> <C-o>$
 
+
+" NerdCommenter customizations
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+
+" lhs comments
+"map ,# :s/^/#/<CR>
+"map ,/ :s/^/\/\//<CR>
+"map ,> :s/^/> /<CR>
+"map ," :s/^/\"/<CR>
+"map ,% :s/^/%/<CR>
+"map ,! :s/^/!/<CR>
+"map ,; :s/^/;/<CR>
+"map ,- :s/^/--/<CR>
+"map ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//<CR>
+"
+"" wrapping comments 
+"map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>
+"map ,( :s/^\(.*\)$/\(\* \1 \*\)/<CR>
+"map ,< :s/^\(.*\)$/<!-- \1 -->/<CR>
+"map ,d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>
