@@ -14,7 +14,11 @@ cp vim/vimrc ~/.vimrc
 # ---------------------------------------------------------------------
 
 # install tmux
-sudo apt-get install tmux
+if [ "$(uname)" == "Darwin" ]; then
+    brew install tmux
+else
+    sudo apt-get install tmux
+fi
 
 # download plugin manager for tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
