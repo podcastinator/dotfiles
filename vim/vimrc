@@ -70,7 +70,7 @@ if has("gui_running")
 end
 
 " use System Clipboard:
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
 
 " map Leader to space
 let mapleader = ","
