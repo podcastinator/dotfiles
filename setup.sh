@@ -16,6 +16,7 @@ cp vim/vimrc ~/.vimrc
 # install tmux
 if [ "$(uname)" == "Darwin" ]; then
     brew install tmux
+    brew install reattach-to-user-namespace
 else
     sudo apt-get install tmux
 fi
