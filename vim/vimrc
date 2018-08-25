@@ -47,7 +47,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdcommenter'
 " tmux integration
 Plug 'christoomey/vim-tmux-navigator'
-
+" insert brackets/quotes etc. in pairs
+Plug 'jiangmiao/auto-pairs'
 
 " plugins end
 call plug#end()
