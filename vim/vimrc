@@ -113,3 +113,6 @@ inoremap <C-e> <C-o>$
 " Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDCommentEmptyLines = 1
 
+" Cycle through buffers with tab
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
