@@ -49,9 +49,17 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'christoomey/vim-tmux-navigator'
 " insert brackets/quotes etc. in pairs
 Plug 'jiangmiao/auto-pairs'
+" Sublime's multiple selection
+Plug 'terryma/vim-multiple-cursors'
 
 " plugins end
 call plug#end()
+
+" Auto install plugins
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
 
 " enable syntax highlighting
 if !exists("g:syntax_on")
