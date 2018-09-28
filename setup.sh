@@ -23,12 +23,14 @@ cp git/gitconfig ~/.gitconfig
 if [ "$(uname)" == "Darwin" ]; then
     brew install tmux
     brew install reattach-to-user-namespace
+    cp tmux/tmux-macos.conf ~/.tmux.conf
 else
     sudo apt-get install tmux
+    sudo apt-get install xsel
+    cp tmux/tmux-linux.conf ~/.tmux.conf
 fi
 
 # download plugin manager for tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-cp tmux/tmux.conf ~/.tmux.conf 
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
