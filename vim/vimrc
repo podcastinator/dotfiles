@@ -124,3 +124,6 @@ let g:NERDCommentEmptyLines = 1
 " Cycle through buffers with tab
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
+
+" Close buffer without closing split using Bd
+command Bd bp|bd #
