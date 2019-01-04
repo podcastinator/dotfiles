@@ -9,6 +9,7 @@ set smartcase
 
 " set line numbers
 set number
+set relativenumber
 
 " cmdline history
 set history=1000
@@ -22,6 +23,7 @@ set hidden
 " set window title
 set title
 
+set cursorline
 
 " intelligent indentation
 set autoindent
