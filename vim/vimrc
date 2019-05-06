@@ -53,6 +53,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'jiangmiao/auto-pairs'
 " Sublime's multiple selection
 Plug 'terryma/vim-multiple-cursors'
+" surroundings
+Plug 'tpope/vim-surround'
 
 " plugins end
 call plug#end()
