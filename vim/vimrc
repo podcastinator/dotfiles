@@ -55,6 +55,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 " surroundings
 Plug 'tpope/vim-surround'
+" Latex
+Plug 'lervag/vimtex'
 
 " plugins end
 call plug#end()
