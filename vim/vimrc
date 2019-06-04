@@ -58,6 +58,11 @@ Plug 'tpope/vim-surround'
 " Latex
 Plug 'lervag/vimtex'
 
+" Completion
+Plug 'Shougo/deoplete.nvim'
+" Fuzzy search
+Plug 'ctrlpvim/ctrlp.vim'
+
 " plugins end
 call plug#end()
 
@@ -72,6 +77,15 @@ if !exists("g:syntax_on")
     syntax enable
 endif
 
+
+set omnifunc=syntaxcomplete#Complete
+
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#var('omni', 'input_patterns', {
+  \ 'tex': g:vimtex#re#deoplete
+  \})
+" Tab based completion
+inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<Tab>"
 
 " solarized theme
 let g:solarized_termtrans = 1
@@ -127,3 +141,13 @@ let g:NERDCommentEmptyLines = 1
 
 " Close buffer without closing split using Bd
 command Bd bp|bd #
+
+let g:vimtex_view_method = 'skim'
+let g:vimtex_complete_enabled = 1
+
+" Use ripgrep for cltrp
+let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+let g:ctrlp_use_caching = 0
+
+" Enable spell checking for text files
+autocmd FileType text,markdown,html,tex set spell
