@@ -34,6 +34,7 @@
   a       = add -u
   aa      = add --all :/
   ap      = add -u -p
+  b       = branch
   c       = commit -v
   co      = checkout
   d       = diff
