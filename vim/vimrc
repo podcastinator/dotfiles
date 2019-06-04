@@ -142,6 +142,9 @@ inoremap <C-a> <C-o>0
 inoremap <C-e> <C-o>$
 
 
+" Set low update time for gitgutter
+set updatetime=250
+
 " NerdCommenter customizations
 " Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDCommentEmptyLines = 1
