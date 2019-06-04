@@ -9,6 +9,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 cp vim/vimrc ~/.vimrc
 
+# Install ripgrep for CtrlP
+if [ "$(uname)" == "Darwin" ]; then
+    brew install ripgrep
+else
+    sudo apt-get install ripgrep
+fi
+
 # ---------------------------------------------------------------------
 # Git
 # ---------------------------------------------------------------------
@@ -34,3 +41,9 @@ fi
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+
+# ---------------------------------------------------------------------
+# Tex
+# ---------------------------------------------------------------------
+
+cp tex/latexmkrc ~/.latexmkrc
