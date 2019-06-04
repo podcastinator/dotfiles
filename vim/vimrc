@@ -38,6 +38,12 @@ set expandtab
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
 
+
+" Incremental search
+set incsearch
+" remove highlights
+nnoremap <esc><esc> :silent! nohls<cr>
+
 " plugins start
 call plug#begin('~/.vim/plugged')
 
