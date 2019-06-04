@@ -64,10 +64,15 @@ Plug 'tpope/vim-surround'
 " Latex
 Plug 'lervag/vimtex'
 
-" Completion
+" Completion (deoplete requires the next two plugins in vim)
 Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
 " Fuzzy search
 Plug 'ctrlpvim/ctrlp.vim'
+" Display changes in git:
+Plug 'airblade/vim-gitgutter'
 
 " plugins end
 call plug#end()
