@@ -1,4 +1,3 @@
-
 set nocompatible
 filetype plugin indent on
 syntax on
@@ -41,6 +40,8 @@ nnoremap P P=`]<C-o>
 
 " Incremental search
 set incsearch
+" Hightlight all on search
+set hlsearch
 " remove highlights
 nnoremap <esc><esc> :silent! nohls<cr>
 
