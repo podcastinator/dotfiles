@@ -51,7 +51,7 @@ call plug#begin('~/.config/nvim/plugged')
 " file explorer
 Plug 'scrooloose/nerdtree'
 " colorscheme
-Plug 'altercation/vim-colors-solarized'
+Plug 'iCyMind/NeoSolarized'
 " commenting
 Plug 'scrooloose/nerdcommenter'
 " tmux integration
@@ -100,15 +100,9 @@ call deoplete#custom#var('omni', 'input_patterns', {
 inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<Tab>"
 
 " solarized theme
-let g:solarized_termtrans = 1
-let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
+set termguicolors
+colorscheme NeoSolarized
 
-if has("gui_running")
-    "tell the term has 256 colors
-    set t_Co=256
-end
 
 " use System Clipboard:
 set clipboard^=unnamed,unnamedplus
