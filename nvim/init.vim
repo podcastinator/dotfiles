@@ -166,3 +166,7 @@ let g:ctrlp_use_caching = 0
 
 " Enable spell checking for text files
 autocmd FileType text,markdown,html,tex set spell
+
+
+" Faster tex files (reduce syntax highlighting)
+let g:tex_fast="mMpr"
