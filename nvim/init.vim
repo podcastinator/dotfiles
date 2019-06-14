@@ -170,3 +170,6 @@ autocmd FileType text,markdown,html,tex set spell
 
 " Faster tex files (reduce syntax highlighting)
 let g:tex_fast="mMpr"
+
+" Set up vim-surround for LaTeX commands
+let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
