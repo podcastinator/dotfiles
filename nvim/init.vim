@@ -37,13 +37,16 @@ set expandtab
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
 
+" map Leader to comma
+let mapleader = ","
+
 
 " Incremental search
 set incsearch
 " Hightlight all on search
 set hlsearch
 " remove highlights
-nnoremap <esc><esc> :silent! nohls<cr>
+nnoremap <leader><leader> :noh<cr>
 
 " plugins start
 call plug#begin('~/.config/nvim/plugged')
@@ -106,9 +109,6 @@ colorscheme NeoSolarized
 
 " use System Clipboard:
 set clipboard^=unnamed,unnamedplus
-
-" map Leader to space
-let mapleader = ","
 
 " enable mouse support
 set mouse=a
