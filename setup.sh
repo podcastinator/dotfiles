@@ -65,7 +65,5 @@ cp tex/latexmkrc ~/.latexmkrc
 
 cat bash/bashrc >> ~/.bashrc
 cat bash/bash_profile >> ~/.bash_profile
-
-echo 'set completion-ignore-case on' >> ~/.inputrc
-echo 'set show-all-if-ambiguous on' >> ~/.inputrc
+cat bash/inputrc >> ~/.inputrc
 
