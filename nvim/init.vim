@@ -101,6 +101,7 @@ inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<Tab>"
 " solarized theme
 set termguicolors
 colorscheme NeoSolarized
+set background=dark
 
 
 " use System Clipboard:
