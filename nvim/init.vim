@@ -67,12 +67,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 " Latex
 Plug 'lervag/vimtex'
-
-" Completion (deoplete requires the next two plugins in vim)
+" Completion 
 Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-
 " Fuzzy search
 Plug 'ctrlpvim/ctrlp.vim'
 " Display changes in git:
@@ -167,3 +163,5 @@ let g:tex_fast="mMpr"
 
 " Set up vim-surround for LaTeX commands
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
+
+au FileType tex let b:AutoPairs = AutoPairsDefine({'$' : '$'})
