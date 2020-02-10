@@ -29,8 +29,8 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/nvim/after/ftplugin
 cp nvim/init.vim ~/.config/nvim/init.vim
-cp nvim/c.vim ~/..config/nvim/after/ftplugin/c.vim
-cp nvim/c.vim ~/..config/nvim/after/ftplugin/cpp.vim
+cp nvim/c.vim ~/.config/nvim/after/ftplugin/c.vim
+cp nvim/c.vim ~/.config/nvim/after/ftplugin/cpp.vim
 
 
 # ---------------------------------------------------------------------
