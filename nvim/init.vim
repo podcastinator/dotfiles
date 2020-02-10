@@ -98,6 +98,23 @@ call deoplete#custom#var('omni', 'input_patterns', {
 " Tab based completion
 inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<Tab>"
 
+
+" Fix for deoplete/Multiple_cursors conflict (https://github.com/terryma/vim-multiple-cursors/issues/235#issuecomment-466128522)
+func! Multiple_cursors_before()
+  if deoplete#is_enabled()
+    call deoplete#disable()
+    let g:deoplete_is_enable_before_multi_cursors = 1
+  else
+    let g:deoplete_is_enable_before_multi_cursors = 0
+  endif
+endfunc
+func! Multiple_cursors_after()
+  if g:deoplete_is_enable_before_multi_cursors
+    call deoplete#enable()
+  endif
+endfunc
+
+
 " solarized theme
 set termguicolors
 colorscheme NeoSolarized
