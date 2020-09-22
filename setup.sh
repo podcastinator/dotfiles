@@ -13,7 +13,7 @@ else
     sudo add-apt-repository ppa:neovim-ppa/stable
     sudo apt-get update
     sudo apt-get install -y ripgrep
-    sudo apt-get install -y neovim
+    sudo apt-get install -y neovim curl
 fi
 
 # download plugin manager for vim
