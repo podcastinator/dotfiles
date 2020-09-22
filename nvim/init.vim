@@ -34,8 +34,8 @@ set shiftwidth=4
 " on pressing tab, insert 4 spaces
 set expandtab
 " Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
+nnoremap p p=`]
+nnoremap P P=`]
 
 " map Leader to comma
 let mapleader = ","
@@ -165,6 +165,7 @@ let g:NERDCommentEmptyLines = 1
 " Close buffer without closing split using Bd
 command Bd bp|bd #
 
+let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'skim'
 let g:vimtex_complete_enabled = 1
 
