@@ -40,6 +40,15 @@ nnoremap P P=`]
 " map Leader to comma
 let mapleader = ","
 
+" python provider: dedicated venv with pynvim (survives pyenv version switches)
+" created via: python3 -m venv ~/.venvs/nvim && ~/.venvs/nvim/bin/pip install pynvim
+let g:python3_host_prog = expand('~/.venvs/nvim/bin/python')
+" disable providers we don't use (silences checkhealth warnings)
+let g:loaded_python_provider = 0
+let g:loaded_ruby_provider = 0
+let g:loaded_perl_provider = 0
+let g:loaded_node_provider = 0
+
 
 " Incremental search
 set incsearch
@@ -52,11 +61,11 @@ nnoremap <leader><leader> :noh<cr>
 call plug#begin('~/.config/nvim/plugged')
 
 " file explorer
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 " colorscheme
-Plug 'iCyMind/NeoSolarized'
+Plug 'overcache/NeoSolarized'
 " commenting
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 " tmux integration
 Plug 'christoomey/vim-tmux-navigator'
 " insert brackets/quotes etc. in pairs
@@ -67,8 +76,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 " Latex
 Plug 'lervag/vimtex'
-" Completion 
-Plug 'Shougo/deoplete.nvim'
+" Completion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Fuzzy search
 Plug 'ctrlpvim/ctrlp.vim'
 " Display changes in git:
