@@ -46,7 +46,6 @@ cp git/gitconfig ~/.gitconfig
 # install tmux
 if [ "$(uname)" == "Darwin" ]; then
     brew install tmux
-    brew install reattach-to-user-namespace
     cp tmux/tmux-macos.conf ~/.tmux.conf
 else
     sudo apt-get install -y tmux
