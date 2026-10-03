@@ -69,7 +69,9 @@ cp tex/latexmkrc ~/.latexmkrc
 # Bash
 # ---------------------------------------------------------------------
 
-cat bash/bashrc >> ~/.bashrc
-cat bash/bash_profile >> ~/.bash_profile
-cat bash/inputrc >> ~/.inputrc
+# symlink rather than append, so re-running setup.sh doesn't duplicate anything
+DOTFILES="$(cd "$(dirname "$0")" && pwd)"
+ln -sf "$DOTFILES/bash/bashrc" ~/.bashrc
+ln -sf "$DOTFILES/bash/bash_profile" ~/.bash_profile
+ln -sf "$DOTFILES/bash/inputrc" ~/.inputrc
 

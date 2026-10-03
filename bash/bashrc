@@ -7,14 +7,10 @@ alias vi="nvim"
 alias ll="ls -lh"
 alias la="ls -alh"
 
-alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-
 # solarized colors
 export PS1="\[\e[00;35m\]\u\[\e[0m\]@\[\e[00;36m\]\h\[\e[0m\]:\[\e[00;33m\]\w \[\e[0m\]$ "
 export CLICOLOR=1
 
 # grep colors
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='1;31;1'
-
-export PATH="$HOME/.local/bin:$PATH"  # Claude Code CLI
+alias grep="grep --color=auto"
+export GREP_COLORS='mt=1;31'
