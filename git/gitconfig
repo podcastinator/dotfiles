@@ -3,13 +3,12 @@
   email = rishabhp89@gmail.com
 [github]
   user = podcastinator
-[hub]
-  protocol = https
 [core]
   editor = vim -f
 [push]
-  config = default
-  default = tracking
+  default = simple
+[init]
+  defaultBranch = main
 [color]
   diff = auto
   status = auto
